@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Premium Sports League</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #ffffff;
+            text-align: center;
+            /* Center text within body */
+        }
+
+        nav {
+            background-color: #f9f920;
+            overflow: hidden;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand img {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: rgb(3, 3, 3);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d17258;
+            /* Red */
+            color: black;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 0 auto 20px;
+            /* Center section content with 20px margin at the bottom */
+            text-align: left;
+            /* Reset text alignment for section content */
+            max-width: 100%;
+            /* Set maximum width for content to 100% of the screen width */
+            background-color: #000000;
+            /* Black background for sections */
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+            height: 100vh;
+            /* Set height to 100% of the viewport height */
+        }
+
+        .home-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-image-container {
+            flex: 1 1 100%;
+            /* Adjust as needed */
+            overflow: hidden;
+        }
+
+        .home-image {
+            display: block;
+            max-width: 100%;
+            height: 50vh;
+            align-items: center;
+        }
+
+        .sports-content {
+            flex: 1 1 100%;
+            /* Adjust as needed */
+            text-align: left;
+            margin-top: 20px;
+            /* Adjust as needed for space between image and content */
+        }
+
+        .sports-content h1 {
+            color: red;
+        }
+
+        .sports-content p {
+            margin-bottom: 15px;
+        }
+
+        .sports-flex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .sports-flex-item {
+            width: 200px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sports-flex-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 0 auto;
+            /* Center footer content */
+        }
+
+        /* Add style for the zoom effect on scroll */
+        section.zoom-out {
+            transform: scale(0.95);
+        }
+
+        /* Style for sport sections */
+        .sport-section {
+            display: none;
+            /* Hide sport sections by default */
+        }
+
+        /* Style for active sport section */
+        .sport-section.active {
+            display: block;
+        }
+
+        #contact {
+            color: #333;
+            height: 50vh;
+        }
+
+        .sport-details {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="brand">
+            <img src="/images/img1.png" width="50px" height="50px">
+            Indian Premier Sports League
+        </div>
+        <a href="#home">Home</a>
+        <a href="#sports-league">Sports League</a>
+        <!-- <a href="#instructions">Instructions</a> -->
+        <a href="#instructions">About</a>
+        <a href="#contact">Contact</a>
+        <div class="about-dropdown">
+            <label for="sports-league-dropdown">Select a Sports League:</label>
+            <select id="sports-league-dropdown">
+                <option value="select">Select</option>
+                <option value="cricket">Cricket</option>
+                <option value="football">Football</option>
+                <option value="kabbadi">Kabaddi</option>
+                <option value="hockey">Hockey</option>
+            </select>
+            <button id="navigate-button">Go</button>
+        </div>
+    </nav>
+
+    <section id="home" class="zoom-out">
+        <!-- Content of the Home section goes here -->
+        <div class="home-container">
+            <div class="home-image-container">
+                <img class="home-image" src="/images/img2.png" alt="Home Image">
+            </div>
+            <div class="sports-content">
+                <h1>Welcome to <span style="color: red;">Indian Premier Sports League</span></h1>
+                <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Welcome to the vibrant world of
+                    the Indian Premier Sports League (IPSL), where athleticism meets entertainment, and passion
+                    converges with competition.
+                    <h3 style="color: #f9f920;">IPSL stands as a testament to India's fervor for sports, showcasing a
+                        diverse array of games that captivate the hearts of millions.</h3> From the thunderous cheers of
+                    cricket stadiums to the swift maneuvers on the football pitch, IPSL celebrates the spirit of
+                    sportsmanship and unity.
+
+                    The league brings together top-tier athletes, both domestic talents and international stars, creating
+                    an electrifying atmosphere that resonates with fans nationwide. Cricket, undoubtedly the nation's
+                    favorite, takes center stage, with thrilling matches, breathtaking innings, and nail-biting finishes.
+                    IPSL also recognizes the growing popularity of sports like football, hockey, and badminton, providing
+                    a platform for athletes to showcase their prowess and inspire a new generation of enthusiasts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sports-league">
+        <!-- Content of the Sports League section goes here -->
+        <h2>Sports League</h2>
+        <div class="sports-flex-container">
+            <div class="sports-flex-item">
+                <img src="/images/cricket.png" alt="Cricket Image">
+                <h3>Cricket</h3>
+                <p>Explore the thrilling world of cricket in our sports league.</p>
+            </div>
+            <div class="sports-flex-item">
+                <img src="/images/football.jpeg" alt="Football Image">
+                <h3>Football</h3>
+                <p>Experience the excitement of football in our sports league.</p>
+            </div>
+            <div class="sports-flex-item">
+                <img src="/images/kabbadi.jpeg" alt="Kabaddi Image">
+                <h3>Kabaddi</h3>
+                <p>Discover the traditional sport of Kabaddi in our sports league.</p>
+            </div>
+            <div class="sports-flex-item">
+                <img src="/images/hockey.jpeg" alt="Hockey Image">
+                <h3>Hockey</h3>
+                <p>Witness the fast-paced action of hockey in our sports league.</p>
+            </div>
+            <!-- Add more sports as needed -->
+        </div>
+    </section>
+
+    <section id="instructions" class="sport-section active">
+        <!-- Content of the Instructions section goes here -->
+        <h2>Instructions</h2>
+        <p>Select a sport from the dropdown and press the "Go" button to view information about that sport.</p>
+    </section>
+
+    <section id="about" class="sport-section" data-sport="cricket">
+        <!-- Content of the Cricket section goes here -->
+        <h2>Cricket Section</h2>
+        <img src="/images/cricket1.jpg" width="500px" heigh="100px" alt="Cricket Inventor">
+        <div class="sport-details">
+            <p>
+                Cricket is more than just a sport in India; it is a cultural phenomenon that unites millions of fans across the country. The sport has 
+                a rich history in India and has played a pivotal role in shaping the nation's identity. 
+                From local gully cricket matches to the grandeur of international tournaments, cricket holds a special place in the hearts of Indians.
+            </p>
+            <p>
+                The Board of Control for Cricket in India (BCCI) is the governing body for cricket in the country, 
+                overseeing domestic competitions, selecting national teams, and organizing various leagues. The Indian Premier League (IPL), launched in 2008, has been a game-changer, bringing together top international players and providing a platform for Indian talents to showcase their skills. The IPL has become one of
+                the most-watched and lucrative T20 leagues globally, adding a new dimension to Indian cricket.
+            </p>
+            <p>
+                The Indian national cricket team is a powerhouse in international cricket. Led by captains such as Virat Kohli and Rohit Sharma,
+                India has achieved success on the global stage, winning major tournaments, including the ICC Cricket World Cup and the ICC Champions Trophy.
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="sport-section" data-sport="football">
+        <!-- Content of the Football section goes here -->
+        <h2>Football Section</h2>
+        <img src="/images/football1.jpg"  alt="Football Inventor">
+        <div class="sport-details">
+            <p>
+                Football, often referred to as "the beautiful game," has grown into a global phenomenon, and in India, it has garnered a massive and passionate following. The sport has a rich history in the country, and the popularity of football has been on the rise, 
+                fueled by domestic leagues, international tournaments, and the widespread love for the game at the grassroots level.
+            </p>
+            <p>
+                The Indian Super League (ISL) has been instrumental in shaping the landscape of football in the country. Launched in 2014, the ISL has provided a platform for top Indian and international players to showcase their talent. The 
+                league has not only brought a professional structure to Indian football but has also ignited a renewed interest and enthusiasm among fans.
+            </p>
+            <p>
+                Indian football has seen promising talent emerge over the years, with players like Sunil Chhetri, the captain of the Indian national football team, leading the charge. Chhetri's goal-scoring prowess and leadership on the field have made him a football icon in the country. 
+                Additionally, young talents like Anirudh Thapa, Sahal Abdul Samad, and others have been making significant contributions to the growth of Indian football.
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="sport-section" data-sport="kabbadi">
+        <!-- Content of the Kabaddi section goes here -->
+        <h2>Kabaddi</h2>
+        <img src="/images/kabbadi1.jpg" width="500px" heigh="150px" alt="Kabaddi Inventor">
+        <div class="sport-details">
+            <p>Kabaddi, deeply rooted in Indian culture and tradition, has emerged as a powerhouse in the world of sports. This high-energy, 
+                contact team sport showcases a unique blend of agility, strength, and strategy, making it a favorite among both players and fans.
+            </p>
+            <p>
+                The Pro Kabaddi League (PKL) has played a pivotal role in elevating the profile of kabaddi in India. 
+                With a league format that attracts top-notch talent from around the world, PKL has become a platform for players to showcase their skills and for fans to revel in the thrill of the game.
+            </p>
+            <p>
+                Kabaddi's simplicity and intensity make it an engaging sport that resonates with audiences across age groups. The sport has not only captured the imagination of fans in India but has also gained international recognition, 
+                with various countries participating in kabaddi competitions on the global stage.
+            </p>
+            <p>
+                Whether experienced in local tournaments, school competitions, or the grand stage of the Pro Kabaddi League, 
+                kabaddi continues to embody the spirit of competition and camaraderie. It stands as a testament to the nation's passion for sports and its ability to evolve, captivate, and unite communities through the thrilling artistry of kabaddi. For the latest updates on kabaddi, including player rosters and tournament details, 
+                it is recommended to refer to official sports news sources or the respective league's official website.
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="sport-section" data-sport="hockey">
+        <!-- Content of the Hockey section goes here -->
+        <h1>Hockey</h1>
+        <img src="/images/hockey1.jpg" width="500px" heigh="150px" alt="Hockey Inventor">
+        <div class="sport-details">
+            <p>Indian hockey has a rich and storied history, and it holds a special place in the hearts of sports enthusiasts in the country. 
+                The sport has seen several highs and lows, but in recent years, 
+                the Indian men's and women's hockey teams have displayed remarkable prowess on the international stage.
+            </p>
+            <p>Key players who played crucial roles in the Indian men's team during the Tokyo Olympics include PR Sreejesh, Harmanpreet Singh, Manpreet Singh (captain), and Simranjeet Singh, among others. 
+                For the women's team, notable players include Rani Rampal (captain), Savita Punia, Vandana Katariya, and Gurjit Kaur.
+            </p>
+            <p>
+                Indian men's and women's hockey teams participated in the Tokyo 2020 Olympics, 
+                which were held in 2021 due to the COVID-19 pandemic. The Indian men's team, led by coach Graham Reid, exhibited exceptional skills and teamwork, earning them a place in the semi-finals. This was a historic achievement, marking India's return to the Olympic semi-finals in men's hockey after four decades. 
+                The team ultimately secured a bronze medal by defeating Germany in a thrilling match.
+            </p>
+            <p>
+                The Indian women's hockey team, coached by Sjoerd Marijne, also put up a commendable performance, reaching the quarterfinals. Although they didn't clinch a medal, 
+                their spirited performance garnered widespread praise and contributed to the growing recognition of women's hockey in India.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <!-- Content of the Contact section goes here -->
+        <h2 style="color: #ddd;">Contact</h2>
+        <p>For inquiries and support, please contact us at:</p>
+        <p>Phone: [8783838899]</p>
+        <p>Email: info@sportsleague.com</p>
+        <p>Privacy Information</p>
+        <p><a href="#instructions" class="contact" style="color: #333;">About</a></p>
+        <p>Document</p>
+    </section>
+
+    <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; 2023 Indian Premium Sports League. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add JavaScript to zoom out the Home section on scroll
+        document.addEventListener('scroll', function () {
+            var scrollPosition = window.scrollY;
+            var homeSection = document.getElementById('home');
+
+            // Zoom out the Home section when scrolling
+            homeSection.style.transform = 'scale(' + (1 - scrollPosition / 2000) + ')';
+        });
+
+        // Add JavaScript to navigate to the selected section
+        document.getElementById('navigate-button').addEventListener('click', function () {
+            var selectedOption = document.getElementById('sports-league-dropdown').value;
+            var selectedSection = document.querySelector('.sport-section[data-sport="' + selectedOption + '"]');
+
+            // Hide all sections
+            document.querySelectorAll('.sport-section').forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            selectedSection.classList.add('active');
+        });
+    </script>
+</body>
+
+</html>
